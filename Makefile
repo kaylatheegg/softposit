@@ -13,7 +13,7 @@ LCFLAGS = -lm -Isoftposit/includes
 
 DEBUGFLAGS = -g -rdynamic -DDEBUG -O0
 
-DONTBEAFUCKINGIDIOT = -Werror -Wall -Wextra -pedantic -Wno-missing-field-initializers
+DONTBEAFUCKINGIDIOT = -Werror -Wall -Wextra -pedantic -Wno-missing-field-initializers -Wno-return-type -Wno-unused-parameter -Wno-builtin-declaration-mismatch
 
 %.o: %.c
 	$(LCC) -c -o $@ $< $(LCFLAGS) $(DEBUGFLAGS) $(DONTBEAFUCKINGIDIOT)
